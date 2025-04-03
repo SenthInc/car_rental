@@ -1,6 +1,6 @@
 import AddCarForm from '@/components/AddCar/AddCarForm';
 
-const page = () => {
+const Page = () => {
   return (
     <div className='padding-layout relative my-[30px] flex flex-col rounded-[10px] bg-white-0 px-6 py-10 dark:bg-gray-850 md:my-[50px] md:py-[30px]'>
       <div className='inline-flex flex-col items-start justify-start gap-2.5'>
@@ -19,4 +19,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
