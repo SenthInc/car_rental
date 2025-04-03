@@ -4,8 +4,8 @@ import Filter from './Filter';  // Assuming Filter component is imported
 import { Car } from '@/types';  // Make sure the Car type is correctly imported
 
 const Page = () => {
-  // Updated state initialization to ensure it doesn't allow null
-  const [filteredCars, setFilteredCars] = useState<Car[]>([]);  // Default to an empty array
+  // Corrected state initialization to ensure it doesn't allow null
+  const [filteredCars, setFilteredCars] = useState<Car[]>([]);  // Default to an empty array, not null
 
   return (
     <div className='padding-layout relative my-[30px] flex flex-col rounded-[10px] bg-white-0 px-6 py-10 dark:bg-gray-850 md:my-[50px] md:py-[30px]'>
@@ -25,7 +25,7 @@ const Page = () => {
       {/* Filter component */}
       <section className='hidden lg:grid lg:gap-14'>
         <Filter
-          setFilteredCars={setFilteredCars}  // Pass setFilteredCars here
+          setFilteredCars={setFilteredCars}  // Now correctly typed
           cars={filteredCars}  // Assuming cars data is used in Filter component
           setLoading={/* You should provide a setLoading function here */}
         />
